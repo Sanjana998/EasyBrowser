@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_weight="0.01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#C36E8B"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme">
+
+            <RelativeLayout
+                android:id="@+id/url_go_progressbar_relLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/web_address_edit_text"
+                    android:layout_width="273dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="56dp"
+                    android:layout_marginLeft="56dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:hint="Enter URL"
+                    android:inputType="textWebEditText"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/go_button"
+                    android:layout_width="45dp"
+                    android:layout_height="42dp"
+                    android:layout_alignTop="@+id/web_address_edit_text"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="21dp"
+                    android:layout_marginRight="21dp"
+                    android:text="GO" />
+
+                <ProgressBar
+                    android:id="@+id/progress_bar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="371dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/web_address_edit_text"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="0.05" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="41dp"
+                    android:layout_height="39dp"
+                    android:src="@mipmap/ic_launcher" />
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </LinearLayout>
+
+    <WebView
+        android:layout_weight="0.98"
+        android:id="@+id/web_view"
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_weight="0.01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <ImageButton
+            android:id="@+id/back_arrow"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#C36E8B"
+            android:src="@drawable/ic_baseline_arrow_back_24" />
+
+        <ImageButton
+            android:id="@+id/forward_arrow"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#C36E8B"
+            android:src="@drawable/ic_baseline_arrow_forward_24" />
+
+        <ImageButton
+            android:id="@+id/stop"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#C36E8B"
+            android:src="@drawable/ic_baseline_cancel_24" />
+
+        <ImageButton
+            android:id="@+id/refresh"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#C36E8B"
+            android:src="@drawable/ic_baseline_refresh_24" />
+
+        <ImageButton
+            android:id="@+id/home"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#C36E8B"
+            android:src="@drawable/ic_baseline_home_24" />
+
+    </LinearLayout>
+</LinearLayout>
